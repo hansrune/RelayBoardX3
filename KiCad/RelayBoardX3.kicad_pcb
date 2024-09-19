@@ -11380,7 +11380,7 @@
 			(effects
 				(font
 					(size 0.48 0.48)
-					(thickness 0.15)
+					(thickness 0.12)
 				)
 			)
 		)
@@ -11679,6 +11679,7 @@
 			(uuid "88b58156-bbaf-419d-bfbe-2d8e9a5cd361")
 		)
 		(model "$(KIPRJMOD)/library/3D//XIAO_ESP32C3.step"
+			(hide yes)
 			(offset
 				(xyz 8 11.3 0)
 			)
@@ -11687,6 +11688,17 @@
 			)
 			(rotate
 				(xyz 0 0 180)
+			)
+		)
+		(model "${KIPRJMOD}/library/3D/XIAO-ESP32-mod.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
 			)
 		)
 	)
