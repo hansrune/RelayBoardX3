@@ -126,20 +126,11 @@ Follow the [README](https://github.com/hansrune/esphome-config) for instructions
 
 By default, MQTT auto discovery is being used. This should work out of the box with Home Assistant, Domoticz and other that support [Home Assistant MQTT Auto Discovery](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery)
 
-
-<!--
-In Home Assistant, the device has these controls. Valves are labelled a, b, c and d. The -1 is the controller instance
+In Home Assistant, the device has this simple selector:
 
 <p align="center">
-    <img src="images/HA-WaterX4-Valves.jpg">
+    <img src="images/HA-Motor123.jpg">
 </p>
-
-... and flow sensor / total counter:
-
-<p align="center">
-    <img src="images/HA-WaterX4-Sensors.jpg">
-</p>
--->
 
 ### ESPEasy
 
