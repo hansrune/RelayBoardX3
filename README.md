@@ -126,6 +126,23 @@ Follow the [README](https://github.com/hansrune/esphome-config) for instructions
 
 By default, MQTT auto discovery is being used. This should work out of the box with Home Assistant, Domoticz and other that support [Home Assistant MQTT Auto Discovery](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery)
 
+
+#### Garage doors control
+
+In Home Assistant, the garage door controls can look like this:
+
+<p align="center">
+    <img src="images/HA-DoorCtrl.jpg">
+</p>
+
+... and the closed state end stop sensors:
+
+<p align="center">
+    <img src="images/HA-ClosedEndstops.jpg">
+</p>
+
+#### Motor control
+
 In Home Assistant, the device has this simple selector:
 
 <p align="center">
