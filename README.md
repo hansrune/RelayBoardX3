@@ -33,15 +33,9 @@ Some of the main features and benefits
     - This device is shielded and comes with an external IPX antenna connector
     - FCC and CE regulations approved
 
-## Setup and mounting
-
-I use a long box with a closing / latched lid. This is designed for outdoor use. Will tolerate rain, but not frost.
-
-<p align="center">
-    <img src="images/WaterX4-Box.jpg">
-</p>
-
-Please note the bottom holes. In case water is leaked, it has a way to drain out of the box
+<!--
+## Setup and mounting - perhaps add later
+-->
 
 ## Indicators
 
@@ -165,7 +159,7 @@ This dual garage door setup uses a pulse driven elevator, and has end stop switc
 
 A `RX-Multi` receiver is used in parallel with the relay board. This is operated by remote control units from a car.
 
-We have outdoor push buttons to operate the garae doors. These disabled via relay #1 when our home alarm state is away or night
+We have outdoor push buttons to operate the garage doors. These are disabled via relay #1 when our home alarm state is away or night. The power on state is that these buttons are enabled.
 
 <p align="center">
     <img src="images/GarageCtrl-wiring-2.x.jpg">
