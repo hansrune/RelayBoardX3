@@ -1,0 +1,28 @@
+// Activate by
+//     curl -s "http://${IP}/control?cmd=event,Motor=<0-3>"
+
+on Motor do
+  taskvalueset,6,1,%eventvalue% // save setting to be remotely readable
+  event StatusOK
+  if %eventvalue% = 0
+    gpio,10,0
+    gpio,6,0
+    gpio,5,0
+  elseif %eventvalue% = 1
+    gpio,10,1
+    gpio,6,0
+    gpio,5,0
+  elseif %eventvalue% = 2
+    gpio,10,1
+    gpio,6,1
+    gpio,5,0
+  elseif %eventvalue% = 3
+    gpio,10,1
+    gpio,6,1
+    gpio,5,1
+  else
+    event StatusErr
+  endif
+endon
+
+// -- end of rules3.txt --

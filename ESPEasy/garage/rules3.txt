@@ -1,0 +1,72 @@
+// Activate by
+//      http://${IP}/control?cmd=event,open1
+//      http://${IP}/control?cmd=event,open2
+//      http://${IP}/control?cmd=event,close1
+//      http://${IP}/control?cmd=event,close2
+//      http://${IP}/control?cmd=event,push1
+//      http://${IP}/control?cmd=event,push2
+//      http://${IP}/control?cmd=event,buttonson
+//      http://${IP}/control?cmd=event,buttonsoff
+
+on StatusOpen1#Switch1 do
+  SendToHTTP,192.168.14.132,8080,/json.htm?param=udevice&type=command&idx=1023&nvalue=[StatusOpen1#Switch1]&parsetrigger=false
+endon
+
+on StatusOpen2#Switch2 do
+  SendToHTTP,192.168.14.132,8080,/json.htm?param=udevice&type=command&idx=1025&nvalue=[StatusOpen2#Switch2]&parsetrigger=false
+endon
+
+on open1 do
+  if [StatusOpen1#Switch1]=0
+    event push1
+  endif
+endon
+
+on open2 do 
+  if [StatusOpen2#Switch2]=0
+    event push2
+  endif
+endon
+
+on close1 do
+  if [StatusOpen1#Switch1]=1
+    event push1
+  endif
+endon
+
+on close2 do 
+  if [StatusOpen2#Switch2]=1
+    event push2
+  endif
+endon
+
+on push1 do
+  gpio,10,1
+  timerset,1,1
+endon
+
+on Rules#Timer=1 do
+  gpio,10,0
+endon
+
+on push2 do
+  gpio,6,1
+  timerset,2,1
+endon
+
+on Rules#Timer=2 do
+  gpio,6,0
+endon
+
+on buttonson do
+  gpio,5,0
+  gpio,2,0
+endon
+
+on buttonsoff do
+  gpio,5,1
+  gpio,2,1
+endon
+
+
+// -- end of rules2.txt --

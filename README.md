@@ -126,7 +126,6 @@ Follow the [README](https://github.com/hansrune/esphome-config) for instructions
 
 By default, MQTT auto discovery is being used. This should work out of the box with Home Assistant, Domoticz and other that support [Home Assistant MQTT Auto Discovery](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery)
 
-
 #### Garage doors control
 
 In Home Assistant, the garage door controls can look like this:
@@ -153,7 +152,10 @@ In Home Assistant, the device has this simple selector:
 
 ESPEasy can be used with a number of different controllers / home automation systms. A custom firmware build description is [available here](https://github.com/hansrune/ESPEasy-custom/blob/builds/custom/mega-20240822-1/README-custombuilds.md)
 
-ESPEasy requires many settings. For configuration settings and rule files, you can upload the files from [this page](./ESPEasy/) as a starting point. Please make sure to change name, unit number, controller IP addresses, NTP, syslog host and latitude/longitude. This configuration uses both a MQTT controller and a Domoticz controller. Change to what you need.
+ESPEasy requires many settings. For configuration settings and rule files, you can upload the below sets of files. Please make sure to change name, unit number, controller IP addresses, NTP, syslog host and latitude/longitude. This configuration uses both a MQTT controller and a Domoticz controller. Change to what you need.
+
+- For the garage control, use the files under [this page](./ESPEasy/garage)
+- For the motor/ventilator control, use the files under [this page](./ESPEasy/motor/config.dat
 
 ## Wiring
 
