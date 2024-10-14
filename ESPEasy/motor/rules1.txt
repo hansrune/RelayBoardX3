@@ -1,0 +1,25 @@
+//
+// PLEASE NOTE: Make sure there is 3 WifiScan loops. They will happen before "System#Boot" event and make sure valve returns to default state
+//
+on System#Boot do
+  // taskvalueset,6,1,1 // Configure this please: DefaultOpen 0=NC 1=NO
+  // event OpenValve
+  // event StatusOK
+
+  // Autodetect NO/NC
+  event,StatusBlink
+  event,Motor=[Settings#MotorSpeed] 
+endon
+
+on WiFi#Connected do
+  LogEntry,"%sysname% ESPEasy: APchange ValveOpen=[ValveOpen#Switch] ValveClosed=[ValveClosed#Switch]"
+  timerset,7,3
+  gpio,2,1        // LED off
+endon
+
+on Rules#Timer=7 do
+  LogEntry,"%sysname% ESPEasy: Connected to %ssid% / %bssid% / %rssi% dB" - Motor speed is [Settings#MotorSpeed],1
+  timerset,7,3600
+endon
+
+// -- end of rules1.txt --
